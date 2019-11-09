@@ -22,7 +22,7 @@
         </plugins>
     </build>
     <properties>
-        <cucumber.version>1.2.0</cucumber.version>
+        <cucumber.version>1.2.5</cucumber.version>
     </properties>
     <dependencies>
         <!-- JUnit -->
@@ -39,80 +39,54 @@
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+		
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-junit</artifactId>
             <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
+		
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>gherkin</artifactId>
             <version>2.12.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.github.adedayo.intellij.sdk</groupId>
-            <artifactId>cucumber-jvm-formatter</artifactId>
-            <version>142.1</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
+    
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>4.7.4</version>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>4.2.0</version>
-            <scope>test</scope>
-        </dependency>
+			<scope>test</scope>
+        </dependency>    
+     
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>4.2.0</version>
+            <version>4.7.4</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>2.3.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server</artifactId>
-            <version>2.42.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>5.0.0-RC1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>1.2.5</version>
-            <scope>test</scope>
-        </dependency>
+     
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-picocontainer</artifactId>
             <version>1.2.5</version>
             <scope>test</scope>
         </dependency>
+		
         <dependency>
             <groupId>info.cukes</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>1.2.5</version>
             <scope>compile</scope>
         </dependency>
+		
+		   <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>2.42.2</version>
+        </dependency>		
+		
     </dependencies>
 </project>
