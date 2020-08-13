@@ -3,28 +3,37 @@ import cucumber.api.java.pt.*;
 
 public class StepDefinitions {
 	
-	@Dado("^que eu tenha em estoque um produto que custe (\\d+) reais$")
-	public void que_eu_tenha_em_estoque_um_produto_que_custe_reais(int arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	  
+	@Dado("^que tenha um produto em estoque no valor de (\\d+) reais$")
+	public void que_tenha_um_produto_em_estoque_no_valor_de_reais(int arg1) throws Throwable {
+	    
+		// INSERT INTO TABLE
 	}
 
-	@Quando("^selecionar o produto na barra de pesquisa$")
-	public void selecionar_o_produto_na_barra_de_pesquisa() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
+	@Quando("^o comprados seleciona o produto$")
+	public void o_comprados_seleciona_o_produto() throws Throwable {
+
+
+	}
+
+	@Quando("^realiza o pagamento$")
+	public void realiza_o_pagamento() throws Throwable {
 	    
 	}
 
-	@Quando("^realizar o pagamento$")
-	public void realizar_o_pagamento() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
+	@Então("^o produto sai de estoque$")
+	public void o_produto_sai_de_estoque() throws Throwable {
 	    
 	}
 
-	@Então("^não recebo nenhum desconto$")
-	public void não_recebo_nenhum_desconto() throws Throwable {
+	@Então("^não recebo o desconto$")
+	public void não_recebo_o_desconto() throws Throwable {
+	   
+	}
+
+	@Então("^recebo desconto$")
+	public void recebo_desconto() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
-	    
+	    throw new PendingException();
 	}
 
 }

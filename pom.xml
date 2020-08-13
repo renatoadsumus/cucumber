@@ -13,16 +13,18 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <!-- Versão do plugin maven -->
-                <version>3.3</version>
+                <version>3.6.1</version>
                 <configuration>
                     <source>1.8<!-- Versão do java --></source>
                     <target>1.8</target>
+                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
         </plugins>
     </build>
     <properties>
         <cucumber.version>1.2.5</cucumber.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
         <!-- JUnit -->
@@ -75,18 +77,29 @@
             <scope>test</scope>
         </dependency>
 		
-        <dependency>
-            <groupId>info.cukes</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>1.2.5</version>
-            <scope>compile</scope>
-        </dependency>
+   
 		
 		   <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-server</artifactId>
             <version>2.42.2</version>
-        </dependency>		
+        </dependency>	
+        
+        <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>1.4.10</version>
+                <exclusions>
+                  <exclusion>
+                    <groupId>xpp3</groupId>
+                    <artifactId>xpp3_min</artifactId>
+                  </exclusion>
+                  <exclusion>
+                    <groupId>xmlpull</groupId>
+                    <artifactId>xmlpull</artifactId>
+                  </exclusion>
+                </exclusions>
+            </dependency>	
 		
     </dependencies>
 </project>
