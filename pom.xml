@@ -18,6 +18,10 @@
                     <source>1.8<!-- Versão do java --></source>
                     <target>1.8</target>
                      <encoding>UTF-8</encoding>
+                     <fork>true</fork>
+	<executable>
+					/usr/lib/jvm/java-openjdk/bin/javac
+	</executable>
                 </configuration>
             </plugin>
         </plugins>
