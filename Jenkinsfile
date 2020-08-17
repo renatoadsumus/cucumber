@@ -39,7 +39,7 @@ pipeline {
 
 	post {
         always {
-          cleanws()
+          //cleanws()
 		  echo "Eliminando..."
         }
     }
