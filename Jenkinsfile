@@ -17,9 +17,10 @@ pipeline {
 				echo "#####################################"	
 				echo "###  UNIT TEST  ###"
 				echo "#####################################"
-				
-				sh(""" source /etc/profile.d/maven.sh """)			
-				sh(""" mvn test -Dtest=DescontoTest """)
+						
+				sh(""" docker run --rm \
+						-v /var/lib/jenkins/workspace/Teste_Aceitacao:/codigo_aplicacao/ \
+						-w /codigo_aplicacao/ maven:3.6.3-jdk-8 mvn test -Dtest=DescontoTest """)
 			}		
 		}	
 		
@@ -27,7 +28,7 @@ pipeline {
 		
 			steps{			
 
-                echo "#####################################"	
+                echo "#####################################"
 				echo "###  FUNCTIONAL TEST  ###"
 				echo "#####################################"
 				
