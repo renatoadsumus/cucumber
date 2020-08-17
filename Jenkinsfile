@@ -18,6 +18,7 @@ pipeline {
 				echo "###  UNIT TEST  ###"
 				echo "#####################################"
 				
+				sh(""" source /etc/profile.d/maven.sh """)			
 				sh(""" mvn test -Dtest=DescontoTest """)
 			}		
 		}	
