@@ -46,6 +46,7 @@ pipeline {
         always {
           //cleanws()
 		  echo "Eliminando..."
+		  cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'test/target/json-cucumber-reports/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
         }
     }
 }
