@@ -17,15 +17,22 @@ public class DescontoTest {
     @Test
 	public void compraDe10ReaisSemDesconto()
 	{
+		int resultadoEsperado = 0;
 		
-		assertTrue(true);
+		int resultadoAtual = desconto.CalcularDesconto(10);
+		
+		assertEquals(resultadoEsperado, resultadoAtual);
 	}
 	
 	@Test
 	public void compraDe100Reais10PorcentoDesconto()
 	{
 		
-		assertTrue(true);
+		int resultadoEsperado =10;
+		
+		int resultadoAtual = desconto.CalcularDesconto(100);
+		
+		assertEquals(resultadoEsperado, resultadoAtual);
 	}
 	
 	@Test
