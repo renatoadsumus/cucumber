@@ -7,3 +7,14 @@ Funcionalidade: Desconto Compra com Dinheiro
 
 
   
+  @validação
+  Esquema do Cenário: Valor da compra maior que 100
+    Dado que eu tenha em estoque um produto que custe "<VALOR>" reais    
+    Quando selecionar o produto na barra de pesquisa
+    E realizar o pagamento
+    Então não recebo nenhum desconto    
+   
+   Exemplos: 
+    | VALOR |
+    |	120		|
+    |	140		|

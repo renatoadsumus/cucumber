@@ -1,0 +1,17 @@
+# language: pt
+
+Funcionalidade: Pedido de Abastecimento
+  Como usuário
+  Quero realizar um pedido de abastecimento
+  Para adquirir cashback
+  
+
+#Possuir cadastro no aplicativo de vantagens
+#Possuir opções de abastecimento/combustível para realizar pedido
+#Possuir formas de pagamento cartão/dinheiro
+#Possuir opção de valor de compra para seleção/preenchimento
+#Exibir valor de cashback a ser recebido (de acordo com valor de compra)
+#O valor de cashback deve corresponder a 5% do valor da compra
+#Exibir mensagem de transação concluída
+  
+  
