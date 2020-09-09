@@ -19,7 +19,7 @@ pipeline {
 				echo "#####################################"
 						
 				sh(""" docker run --rm \
-						-v /var/lib/jenkins/workspace/Teste_Aceitacao:/codigo_aplicacao/ \
+						-v ${WORKSPACE}:/codigo_aplicacao/ \
 						-w /codigo_aplicacao/ maven:3.6.3-jdk-8 mvn test -Dtest=DescontoTest """)
 			}		
 		}	
@@ -33,7 +33,7 @@ pipeline {
 				echo "#####################################"
 				
 				sh(""" docker run --rm \
-						-v /var/lib/jenkins/workspace/Teste_Aceitacao:/codigo_aplicacao/ \
+						-v ${WORKSPACE}:/codigo_aplicacao/ \
 						-w /codigo_aplicacao/ maven:3.6.3-jdk-8 mvn test -Dtest=RunCucumberTest \
 						-Dtags=\"@validação and @regressão\" """)
 			}		
