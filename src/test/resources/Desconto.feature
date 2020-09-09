@@ -28,7 +28,9 @@ Funcionalidade: Desconto Compra com Dinheiro
     Quando selecionar o produto na barra de pesquisa
     E realizar o pagamento
     Então não recebo nenhum desconto    
-    
+   
+   Exemplos: 
+   
     | VALOR |
     |	120		|
     |	140		|
