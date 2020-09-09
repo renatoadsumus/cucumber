@@ -23,17 +23,6 @@ pipeline {
 						-w /codigo_aplicacao/ maven:3.6.3-jdk-8 mvn test -Dtest=DescontoTest """)
 			}		
 		}	
-		
-		stage('Publish Test Results') {
-			steps{				
-				echo "#############################"
-                echo "###  PUBLISH TEST RESULTS ###"
-                echo "#############################"	
-
-                junit 'target/surefire-reports/TEST-*.xml'
-			}
-		}
-
 
 		/*stage('Functional Test'){
 		
@@ -48,17 +37,28 @@ pipeline {
 						-w /codigo_aplicacao/ maven:3.6.3-jdk-8 mvn test -Dtest=RunCucumberTest \
 						-Dtags=\"@validação and @regressão\" """)
 			}		
-		}*/	
-		
+
+		}*/
+
+			stage('Publish Test Results') {
+			steps{				
+				echo "#############################"
+                echo "###  PUBLISH TEST RESULTS ###"
+                echo "#############################"	
+
+                junit 'target/surefire-reports/TEST-*.xml'
+			}
+		}
 						
 	}
 
-/*post {
+
+post {
         always {
           //cleanws()
 		  echo "Eliminando..."
 		  cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'target/json-cucumber-reports/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
         }
-    }*/
+    }
 }
 
