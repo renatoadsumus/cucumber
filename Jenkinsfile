@@ -22,9 +22,22 @@ pipeline {
 						-v ${WORKSPACE}:/codigo_aplicacao/ \
 						-w /codigo_aplicacao/ maven:3.6.3-jdk-8 mvn test -Dtest=DescontoTest """)
 			}		
-		}	
+		}
+		
+		stage('Quality Gate'){
+		
+			steps{
+			
+			
+				echo "#####################################"	
+				echo "###  Quality GAte  ###"
+				echo "#####################################"
+						
+			
+			}		
+		}
 
-		/*stage('Functional Test'){
+		stage('Functional Test'){
 		
 			steps{			
 
@@ -38,8 +51,22 @@ pipeline {
 						-Dtags=\"@validação and @regressão\" """)
 			}		
 
-		}*/
-
+		}
+	
+		
+		stage('Deploy DSV'){
+		
+			steps{
+			
+			
+				echo "#####################################"	
+				echo "###  Quality GAte  ###"
+				echo "#####################################"
+						
+			
+			}		
+		}
+		
 			stage('Publish Test Results') {
 			steps{				
 				echo "#############################"
@@ -53,12 +80,12 @@ pipeline {
 	}
 
 
-/*post {
+post {
         always {
           //cleanws()
 		  echo "Eliminando..."
 		  cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'target/json-cucumber-reports/*.json', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
         }
-    }*/
+    }
 }
 
