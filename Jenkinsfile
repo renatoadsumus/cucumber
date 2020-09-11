@@ -6,6 +6,10 @@ pipeline {
 	    }	    
 	} 	
 	
+	parameters {				
+	string(defaultValue: "", description: 'Selecionar Tipo De Teste que Será Executado', name: 'Tipo’)	
+}
+
 	
 	stages {  	 
 		
