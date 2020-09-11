@@ -48,7 +48,7 @@ pipeline {
 				sh(""" docker run --rm \
 						-v ${WORKSPACE}:/codigo_aplicacao/ \
 						-w /codigo_aplicacao/ maven:3.6.3-jdk-8 mvn test -Dtest=RunCucumberTest \
-						-Dtags=\"@validação and @regressão\" """)
+						-Dtags=\"@validação\" """)
 			}		
 
 		}
